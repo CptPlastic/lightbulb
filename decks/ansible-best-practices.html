@@ -89,7 +89,7 @@ s<!doctype html>
         <section data-state="cover">
           <h2>Principal 1</h2>
           <h2>Complexity Kills Productivity</h2>
-          <p>That's not just a marketing slogan. We really mean it and believe that. We strive to reduce complexity in how we've designed Ansible tools and encourage you to do the same.</p>
+          <p>That's not just a marketing slogan. I really mean it and believe that. I strive to reduce complexity in how I use Ansible or any of the tools and encourage you to do the same.</p>
           <p> <strong>Strive for simplification in what you automate.</strong></p>
           <aside class="notes speaker">
               <ul>
@@ -105,7 +105,7 @@ s<!doctype html>
         <section data-state="cover">
           <h2>Principal 2</h2>
           <h2>Optimize For Readability</h2>
-          <p>If done properly, it can be the documentation of your workflow automation.</p>
+          <p>If done properly, it can be the documentation of your workflow automation. (sort of)</p>
           <aside class="notes speaker">
               <ul>
                   <li>Ever been asked how something works, you show them the docs, then go, oh we've changed that a bit. Assuming you've even got documentation</li>
@@ -122,7 +122,7 @@ s<!doctype html>
         <section data-state="cover">
           <h2>Principal 3</h2>
           <h2>Think Declaratively</h2>
-          <p>Ansible is a desired state engine by design. If you're trying to "write code" in your plays and roles, you're setting yourself up for failure. Our YAML-based playbooks were never meant to be for programming.</p>
+          <p>Ansible is a desired state engine by design. If you're trying to "write code" in your plays and roles, you're setting yourself up for failure. YAML-based playbooks were never meant to be for programming.</p>
           <aside class="notes speaker">
               <ul>
                   <li>Ansible is a desired state engine</li>
@@ -209,7 +209,7 @@ s<!doctype html>
             </p>
 
             <aside class="notes">
-              <p>Start simple, roles and playbooks, and inventory, in one place, then push out the roles you want to share into individual repos and manage with requirements.yml</p>
+              <p>Start simple, roles and playbooks, and inventory (outside of Tower), in one place, then push out the roles you want to share into individual repos and manage with requirements.yml</p>
 
               <p>What defines a project?</p>
 
@@ -388,7 +388,7 @@ s<!doctype html>
 
         <section>
             <h2>Inventory</h2>
-            <h3>Use a single source of truth if you have it -- even if you have multiple sources, Ansible can unify them.</h3>
+            <h3>Use a single source of truth if you have it -- even if you have multiple sources like bitbucket or some text file :), Ansible can unify them.</h3>
             <p>&nbsp;</p>
 
             <div class="columns">
@@ -804,13 +804,13 @@ s<!doctype html>
           <aside class="notes">
             <p>Debugging messages and variable dumps in your plays can be helpful when you are developing or debugging automation automation, but not all the time. Displaying debugging pollutes the standard usage with a lot of noise. It can also scare anxious end users that don’t trust this automation stuff when some JSON dump of information explodes onto their screens.</p>
 
-            <p>The verbosity parameter was added to the debug module in v2.1.</p>
+            <p>The verbosity parameter was added to the debug module in v2.1.(old) We are on 2.9.x</p>
           </aside>
         </section>
 
         <section>
           <h2>Plays & Tasks</h2>
-          <h3>Don’t just start services -- use smoke tests </h3>
+          <h3>Don’t just start services -- use smoke tests. WOW!</h3>
           <pre class="language-yaml"><code>
   - name: check for proper response
     uri:
@@ -832,7 +832,7 @@ s<!doctype html>
 
         <section>
           <h2>Plays & Tasks</h2>
-          <h3>Use run commands sparingly</h3>
+          <h3>Use run commands sparingly. ZERO TRUST</h3>
           <ul>
               <li>Use the run command modules like <span class="monospace">shell</span> and <span class="monospace">command</span> as a last resort</li>
               <li>The <span class="monospace">command</span> module is generally safer</li>
@@ -1032,6 +1032,7 @@ s<!doctype html>
               <li>Like playbooks -- keep roles purpose and function focused</li>
               <li>Use a <span class="monospace">roles/</span> subdirectory for roles developed for organizational clarity in a single project</li>
               <li>Follow the Ansible Galaxy pattern for roles that are to be shared beyond a single project</li>
+              <li>The FAA makes use of bitbucket for common roles</li>
               <li>Limit role dependencies</li>
             </ul>
 
